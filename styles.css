@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+/*pageheader*/
+.page-header {
+  margin-top: 15px;
+  display: flex; /* 使用彈性盒子佈局 */
+  align-items: center; /* 元素垂直居中對齊 */
+  justify-content: space-between; /* 元素平均分布 */
+  padding: 10px; /* 內邊距設置為 10 像素 */
+}
+
+.logo {
+  max-width: 70%; /* 圖片最大寬度為父容器的 100% */
+  height: auto; /* 高度自動調整 */
+}
+
+.main-nav {
+  display: flex; /* 使用彈性盒子佈局 */
+  gap: 10px; /* 按鈕之間的間距為 10 像素 */
+}
+
+.main-nav li {
+  list-style: none; /* 移除列表樣式 */
+}
+
+.main-nav li a {
+  padding: 8px 16px; /* 上下內邊距為 8 像素，左右內邊距為 16 像素 */
+  background-color: #007bff; /* 按鈕背景顏色為藍色 */
+  color: #fff; /* 文字顏色為白色 */
+  text-decoration: none; /* 移除文字下劃線 */
+  border-radius: 4px; /* 圓角邊框半徑為 4 像素 */
+}
+
+.main-nav li a:hover {
+  background-color: #0056b3; /* 按鈕背景顏色在滑鼠懸停時為深藍色 */
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    flex-direction: column; /* 切換為垂直排列 */
+    align-items: flex-start; /* 元素靠左對齊 */
+  }
+
+  .main-nav {
+    flex-direction: column; /* 切換為垂直排列 */
+    margin-top: 10px; /* 上邊距為 10 像素 */
+  }
+}
+
+/*中間內容*/
+
+.green-text {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 60px;
+}
+
+.content {
+  text-align: center;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  justify-items: center;
+}
+
+.image-grid a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  max-width: 450px; /* 設定圖片的最大寬度 */
+  max-height: 350px; /* 設定圖片的最大高度 */
+  border: 3px solid green; /* 加上綠色的外框 */
+}
+
+.image-grid .animal-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 128, 0, 0.8); /* 設定綠色背景顏色 */
+  color: white; /* 設定文字顏色為白色 */
+  padding: 5px;
+  margin: 0;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/*背景*/
+.content {
+  background-image: url("background備用.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
